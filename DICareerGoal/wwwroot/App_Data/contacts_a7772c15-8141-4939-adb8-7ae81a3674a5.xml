@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contacts xmlns="https://github.com/AleksandrSimonov/">
+  <contact isBlocked="true">
+    <fio>
+      <last-name>last-name1</last-name>
+      <first-name>first-name1</first-name>
+      <name>name1</name>
+    </fio>
+    <gender>male</gender>
+    <phoneNumber>phoneNumber1</phoneNumber>
+    <telegram>telegram1</telegram>
+  </contact>
+  <contact isBlocked="false">
+    <fio>
+      <last-name>last-name2</last-name>
+      <first-name>first-name2</first-name>
+      <name>name2</name>
+    </fio>
+    <gender>female</gender>
+    <phoneNumber>phoneNumber2</phoneNumber>
+    <telegram>telegram2</telegram>
+  </contact>
+  <contact isBlocked="true">
+    <fio>
+      <last-name>last-name3</last-name>
+      <first-name>first-name3</first-name>
+      <name>name3</name>
+    </fio>
+    <gender>other</gender>
+    <phoneNumber>phoneNumber3</phoneNumber>
+    <telegram>telegram3</telegram>
+  </contact>
+</contacts>

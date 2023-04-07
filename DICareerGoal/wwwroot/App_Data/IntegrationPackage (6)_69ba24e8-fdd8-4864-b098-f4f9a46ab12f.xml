@@ -1,0 +1,106 @@
+﻿
+<OutgoingTrafficType xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <messageInfo xmlns="http://ip.cbr.ru/objects">
+    <type>outgoingTraffic</type>
+    <version>1</version>
+    <messageID>fcb47872-c730-47b8-bdd2-bfa455d8047f</messageID>
+    <senderID>201</senderID>
+    <senderName>ЕИС СЗ</senderName>
+    <receiverID>101</receiverID>
+  </messageInfo>
+  <outgoingMessages xmlns="http://ip.cbr.ru/objects">
+    <contractMessage>
+      <messageInfo>
+        <type>CONTRACT</type>
+        <version>1</version>
+        <messageID>4d728e32-24df-4ed4-8afd-21dd5931697f</messageID>
+        <senderID>201</senderID>
+        <senderName>ЕИС СЗ</senderName>
+        <receiverID>101</receiverID>
+      </messageInfo>
+      <contract>
+        <identity>
+          <contractID>b35f413b-8d52-4edc-b9c3-38bb06eb2edd</contractID>
+          <contractNumber>Пункт 2.4 </contractNumber>
+          <contractDate>2018-10-11</contractDate>
+        </identity>
+        <generalInfo>
+          <contractType>договор без отнесения на смету расходов</contractType>
+          <subject>Пункт 2.4 </subject>
+          <documentName>авианакладная </documentName>
+          <version>2</version>
+          <registerNumber>Дог-2018-00111</registerNumber>
+          <executingDepartment>000000140</executingDepartment>
+          <purchaseInfo>
+            <purchaseMethod>Открытый одноэтапный конкурс</purchaseMethod>
+          </purchaseInfo>
+          <costInfo>
+            <costType>Цена к договору</costType>
+            <costAmount>
+              <amount>1000.00</amount>
+              <currency>
+                <digitalCode>643</digitalCode>
+                <letterCode>RUB</letterCode>
+              </currency>
+            </costAmount>
+            <costRUR>1000.00</costRUR>
+            <costDetails>1000,00</costDetails>
+          </costInfo>
+          <startDate>2018-10-11</startDate>
+          <validityDate>2018-10-11</validityDate>
+          <validityDateAbsent>N</validityDateAbsent>
+          <isContractClosed>N</isContractClosed>
+          <isContractCancelled>N</isContractCancelled>
+          <contractExecutionDate>2022-09-09</contractExecutionDate>
+        </generalInfo>
+        <parties>
+          <customer>
+            <code>000000000</code>
+            <name>Банк России </name>
+          </customer>
+          <contractor>
+            <isResident>Y</isResident>
+            <residentsIdentity>
+              <isEntrepreneur>N</isEntrepreneur>
+              <inn>5052014050</inn>
+              <kpp>505201001</kpp>
+              <ogrn>1035010552290</ogrn>
+            </residentsIdentity>
+            <name>ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ "ЦИКЛОН-ПРИБОР"</name>
+            <shortName>ЗАО "НПП "ЦИКЛОН-ПРИБОР"</shortName>
+          </contractor>
+        </parties>
+        <paymentsSchedule>
+          <paymentInfo>
+            <paymentAmount>
+              <amount>500.00</amount>
+              <currency>
+                <digitalCode>643</digitalCode>
+                <letterCode>RUB</letterCode>
+              </currency>
+            </paymentAmount>
+            <amountRURwVAT>500.00</amountRURwVAT>
+          </paymentInfo>
+        </paymentsSchedule>
+        <attachments>
+          <File>
+            <attachmentType>Договор</attachmentType>
+            <name>Замечения по КО21.docx</name>
+            <fileType>docx</fileType>
+            <data></data>
+          </File>
+        </attachments>
+        <additionalContractProperties>
+          <property>
+            <key>Signatory</key>
+            <value>Пункт 2.4 </value>
+          </property>
+          <property>
+            <key>ResponsiblePerson</key>
+            <value>region\52MihalevOV</value>
+          </property>
+        </additionalContractProperties>
+      </contract>
+    </contractMessage>
+  </outgoingMessages>
+</OutgoingTrafficType>
