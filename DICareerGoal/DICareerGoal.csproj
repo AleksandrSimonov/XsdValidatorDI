@@ -1,17 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Remove="Views\_ViewStart.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="wwwroot\js\Home\index.js" />
-    <None Remove="xsd\IntegrationMessagesIP.xsd" />
-    <None Remove="xsd\XsdSchemaForValidation.xsd" />
-  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="xsd\IntegrationMessagesIP.xsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -19,21 +11,15 @@
     <EmbeddedResource Include="xsd\XsdSchemaForValidation.xsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="css\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\Home\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="jQuery" Version="3.6.0" />
     <PackageReference Include="Telerik.UI.for.AspNet.Core.Trial" version="2023.1.425"/>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\" />
-    <Folder Include="wwwroot\App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\css\styles.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Update="wwwroot\js\Home\index.js">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 </Project>

@@ -43,8 +43,8 @@ namespace WebApplication1.Controllers
                     foreach (IFormFile file in files)
                     {
                         fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
-                        string physicalPath = Path.Combine(_webHostEnvironment.WebRootPath, "App_Data", fileName);
-
+                        string dirPath = Path.Combine(_webHostEnvironment.WebRootPath, "App_Data");
+                        Directory.CreateDirectory(physicalPath);
                         if (file.Length > 0)
                         {
                             using (var stream = new FileStream(physicalPath, FileMode.Create))
@@ -59,7 +59,7 @@ namespace WebApplication1.Controllers
             }
             catch (Exception ex)
             {
-                return Json(new { isSuccess = false });
+                return Json(new { isSuccess = false, ex = ex});
             }
         }
 

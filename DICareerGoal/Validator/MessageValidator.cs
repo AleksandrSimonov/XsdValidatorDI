@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using System.Xml.Schema;
+using System.Diagnostics;
 
 namespace DICareerGoal.Validator
 {
@@ -22,7 +23,11 @@ namespace DICareerGoal.Validator
         /// </summary>
         public MessageValidator(IOptions<AppSetting> appSettings)
         {
-            _xsdSchemaForValidation = appSettings?.Value?.XsdSchemaForValidation ?? throw new ArgumentNullException(nameof(appSettings));
+            Debugger.Launch();
+            Debugger.Break();
+            var x = appSettings.Value;
+            _xsdSchemaForValidation = "xsd/XsdSchemaForValidation.xsd";
+            //_xsdSchemaForValidation = appSettings?.Value?.XsdSchemaForValidation ?? throw new ArgumentNullException(nameof(appSettings));
             _schemas = GetXmlSchemaSetForValidation();
             _errors = new StringBuilder();
         }

@@ -22,9 +22,9 @@ namespace DICareerGoal
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services
-                .Configure<AppSetting>(Configuration.GetSection("AppSetting"))
-                .AddControllersWithViews();
+            services.AddOptions();
+            services.AddMvc();
+            services.Configure<AppSetting>(Configuration.GetSection("AppSetting"));
             services
                 .AddSession()
                 .AddTransient<IMessageValidator, MessageValidator>()

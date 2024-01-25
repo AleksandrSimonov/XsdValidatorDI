@@ -4,7 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
@@ -14,7 +13,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/DICareerGoal/bin/Debug/net7.0/DICareerGoal.dll",
+            "program": "${workspaceFolder}/wwwroot/DICareerGoal.dll",
             "args": [],
             "cwd": "${workspaceFolder}/DICareerGoal",
             "stopAtEntry": false,
@@ -25,15 +24,14 @@
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
-            },
-            "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
             }
         },
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
-            "request": "attach"
-        }
+            "request": "attach",
+            "processId":11341
+        },
+        
     ]
 }
