@@ -1,7 +1,7 @@
 {
     "version": "2.0.0",
     "tasks": [
-		{
+        {
             "label": "build",
             "command": "dotnet",
             "type": "process",
@@ -22,8 +22,10 @@
                 "${workspaceFolder}/DICareerGoal.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign",
-                "-c", "debug",
-                "-o", "${workspaceFolder}/wwwroot"
+                "-c",
+                "debug",
+                "-o",
+                "${workspaceFolder}/wwwroot"
             ],
             "problemMatcher": "$msCompile",
             "group": {
@@ -67,6 +69,13 @@
                 "${workspaceFolder}/DICareerGoal.sln"
             ],
             "problemMatcher": "$msCompile"
+        },
+
+        {
+            "label": "restart",
+            "dependsOn": [
+                "build", "publish", "run"
+            ]
         }
     ]
 }

@@ -44,11 +44,11 @@ namespace WebApplication1.Controllers
                     {
                         fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
                         string dirPath = Path.Combine(_webHostEnvironment.WebRootPath, "App_Data");
-                        Directory.CreateDirectory(physicalPath);
+                        Directory.CreateDirectory(dirPath);
                         if (file.Length > 0)
                         {
-                            using (var stream = new FileStream(physicalPath, FileMode.Create))
-                            {
+                            using (var stream = new FileStream(Path.Combine(dirPath, fileName), FileMode.Create))
+                        {
                                 file.CopyTo(stream);
                             }
                         }

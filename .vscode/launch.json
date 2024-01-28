@@ -30,7 +30,7 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach",
-            "processId":11341
+            "processId": "${command:pickProcess}"
         },
         
     ]

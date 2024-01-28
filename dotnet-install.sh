@@ -423,8 +423,13 @@ get_normalized_os() {
                 echo "$osname"
                 return 0
                 ;;
+            macos)
+                osname='osx'
+                echo "$osname"
+                return 0
+                ;;
             *)
-                say_err "'$user_defined_os' is not a supported value for --os option, supported values are: osx, linux, linux-musl, freebsd, rhel.6. If you think this is a bug, report it at https://github.com/dotnet/install-scripts/issues."
+                say_err "'$user_defined_os' is not a supported value for --os option, supported values are: osx, macos, linux, linux-musl, freebsd, rhel.6. If you think this is a bug, report it at https://github.com/dotnet/install-scripts/issues."
                 return 1
                 ;;
         esac
@@ -1703,7 +1708,11 @@ do
         -?|--?|-h|--help|-[Hh]elp)
             script_name="$(basename "$0")"
             echo ".NET Tools Installer"
-            echo "Usage: $script_name [-c|--channel <CHANNEL>] [-v|--version <VERSION>] [-p|--prefix <DESTINATION>]"
+            echo "Usage:"
+            echo "       # Install a .NET SDK of a given Quality from a given Channel"
+            echo "       $script_name [-c|--channel <CHANNEL>] [-q|--quality <QUALITY>]"
+            echo "       # Install a .NET SDK of a specific public version"
+            echo "       $script_name [-v|--version <VERSION>]"
             echo "       $script_name -h|-?|--help"
             echo ""
             echo "$script_name is a simple command line interface for obtaining dotnet cli."

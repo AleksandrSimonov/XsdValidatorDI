@@ -5,6 +5,9 @@ using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Diagnostics;
+using log4net;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace DICareerGoal.Validator
 {
@@ -23,11 +26,7 @@ namespace DICareerGoal.Validator
         /// </summary>
         public MessageValidator(IOptions<AppSetting> appSettings)
         {
-            Debugger.Launch();
-            Debugger.Break();
-            var x = appSettings.Value;
-            _xsdSchemaForValidation = "xsd/XsdSchemaForValidation.xsd";
-            //_xsdSchemaForValidation = appSettings?.Value?.XsdSchemaForValidation ?? throw new ArgumentNullException(nameof(appSettings));
+            _xsdSchemaForValidation = appSettings.Value?.XsdSchemaForValidation ?? throw new ArgumentNullException(nameof(appSettings));
             _schemas = GetXmlSchemaSetForValidation();
             _errors = new StringBuilder();
         }
